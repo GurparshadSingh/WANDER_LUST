@@ -1,0 +1,141 @@
+.navbar {
+    height: 5rem;
+    background: #ffffff;
+}
+
+.fa-compass {
+    color: #fe424f;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.f-info-socials a {
+    color: #222222;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.f-info-socials a:hover {
+    color: #fe424f;
+    text-decoration: underline;
+}
+
+.f-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: #ebebeb;
+    min-height: 10rem;
+    padding: 2rem;
+}
+
+.card {
+    border: none;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border-radius: 1rem;
+}
+
+.card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+}
+
+.listing-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.listing-link {
+    display: block;
+    overflow: hidden;
+    border-radius: 1rem;
+    flex-shrink: 0;
+}
+
+.card-img-top {
+    border-radius: 1rem;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    display: block;
+}
+
+.listing-link:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.listing-desc {
+    font-size: 0.95rem;
+    color: #666666;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    font-size: 0.9rem;
+    color: #888888;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-weight: bold;
+    color: #fe424f;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.btn-primary {
+    background-color: #fe424f;
+    border-color: #fe424f;
+}
+
+.btn-primary:hover {
+    background-color: #e63a3e;
+    border-color: #e63a3e;
+}
+
+.container {
+    margin-top: 2rem;
+    min-height: 80vh;
+}
+
+#map {
+    height: 400px;
+    width: 80vh;
+}
+
+#map {
+    height: 420px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.card {
+    border: none;
+}

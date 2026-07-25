@@ -1,0 +1,97 @@
+<% layout("/layouts/boilerplate") %>
+
+    <!-- <h1>All listings</h1> -->
+    <!-- <form method="GET" action="/listings/new">
+        <button>Create new listing</button>
+    </form> -->
+    <style>
+        #filters {
+            display: flex;
+            
+        }
+        #filter {
+            text-align: center;
+            margin-right:  2rem; 
+            opacity: 0.7;
+        }
+        #filter:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+    </style>
+    <div id="filters">
+        <div id="filter">
+            <i class="fa-solid fa-fire"></i>
+            <p>Trending</p>
+        </div>
+        <div id="filter">
+            <i class="fa-solid fa-bed"></i>
+            <p>Rooms</p>
+        </div>
+        <div id="filter">
+            <i class="fa-solid fa-mountain-city"></i>
+            <p>City</p>
+        </div>
+        <div id="filter">
+            <i class="fa-solid fa-mountain"></i>
+            <p>Mountain</p>
+        </div>
+        <div id="filter">
+            <i class="fa-brands fa-fort-awesome"></i>
+            <p>Castle</p>
+        </div>
+        <div id="filter">
+            <i class="fa-solid fa-person-swimming"></i>
+            <p>Pool</p>
+        </div>
+        <div id="filter">
+            <i class="fa-solid fa-campground"></i>
+            <p>Camping</p>
+        </div>
+        <div id="filter">
+            <i class="fa-solid fa-cow"></i>
+            <p>Farms</p>
+        </div>
+        <div id="filter">
+            <i class="fa-solid fa-snowflake"></i>
+            <p>Arctic</p>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4" width="20rem">
+        <% for (let listing of alllistings){ %>
+            <div class="card col listing-card">
+                <a href="/listings/<%= listing._id %>" class="listing-link">
+                    <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image">
+                </a>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">
+                        <%= listing.title %>
+                    </h5>
+                    <p class="card-text listing-desc">
+                        <%= listing.description %>
+                    </p>
+                    <p class="location"><i class="fa fa-map-marker"></i>
+                        <%= listing.location %>
+                    </p>
+                    <div class="mt-auto">
+                        <p class="price">&#8377 <%= listing.price.toLocaleString("en-IN") %>
+                        </p>
+                        <a href="/listings/<%= listing._id %>" class="btn btn-primary btn-sm w-100">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+    </div>
+
+
+
+
+    <!-- <ul>
+        <% for (let listing of alllistings){ %>
+            <li>
+                <a href="/listings/<%= listing._id %>">
+                    <%= listing.title %>
+                </a>
+            </li>
+            <% } %>
+    </ul> -->

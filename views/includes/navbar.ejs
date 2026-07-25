@@ -1,0 +1,70 @@
+<style>
+    .d-flex {
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        padding: 4px;
+    }
+
+    .d-flex:hover {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .d-flex input {
+        border: none;
+        box-shadow: none !important;
+    }
+
+    .d-flex input:focus {
+        outline: none;
+    }
+
+    .d-flex button {
+        border-radius: 25px;
+        background-color: #ff385c;
+        color: white;
+        border: none;
+        padding: 6px 15px;
+    }
+
+    .d-flex button:hover {
+        background-color: #e31c5f;
+    }
+</style>
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/listings">Explore</a>
+
+                <!-- <a class="nav-link" href="/listings">All Listings</a> -->
+                <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
+            </div>
+            <form class="d-flex m-auto">
+                <input class="form-control me-2" type="search" placeholder="Search">
+                <button class="btn rounded-circle" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    
+                </button>
+            </form>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/listings/new">New Listing</a>
+                <%if(!currUser) { %>
+                    <a class="nav-link" href="/signup"><b>Sign up</b></a>
+                    <a class="nav-link" href="/login"><b>Login</b></a>
+                    <% } %>
+
+                        <%if(currUser) { %>
+                            <a class="nav-link" href="/logout">Logout</a>
+                            <% } %>
+
+                                <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
+            </div>
+
+        </div>
+    </div>
+</nav>
